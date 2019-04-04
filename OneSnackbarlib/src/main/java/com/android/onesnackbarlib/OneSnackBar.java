@@ -1188,4 +1188,8 @@ public final class OneSnackBar {
             return super.onInterceptTouchEvent(parent, child, event);
         }
     }
+
+    public int getAppearDirection(){
+        return appearDirection;
+    }
 }

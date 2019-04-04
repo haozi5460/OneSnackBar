@@ -21,7 +21,7 @@ public class AnimationUtil {
                         ObjectAnimator.ofFloat(mView, "translationY",
                                 -height-OTHER_HEIGHT, 0,-OTHER_HEIGHT),
                         ObjectAnimator.ofFloat(mView, "alpha",
-                                0.8f,1.0f)
+                                0.9f,1.0f)
                 );
                 pullSet.setDuration(800);
                 return pullSet;
