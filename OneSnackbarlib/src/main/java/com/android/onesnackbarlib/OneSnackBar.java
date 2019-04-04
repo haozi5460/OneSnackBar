@@ -819,7 +819,7 @@ public final class OneSnackBar {
     }
 
     private void animateViewIn() {
-        if (Build.VERSION.SDK_INT >= 12 && appearDirection == APPEAR_FROM_TOP_TO_DOWN) {
+        if (isFromTopToBottomObjectAnimator()) {
             AnimatorSet animatorSet = AnimationUtil.getShowAnimation(mView,AnimationUtil.ANIMATION_PULL,viewHeight);
             animatorSet.addListener(new Animator.AnimatorListener() {
                 @Override
@@ -871,7 +871,7 @@ public final class OneSnackBar {
     }
 
     private void animateViewOut(final int event) {
-        if (Build.VERSION.SDK_INT >= 12 && appearDirection == APPEAR_FROM_TOP_TO_DOWN ) {
+        if (isFromTopToBottomObjectAnimator()) {
             AnimatorSet animatorSet = AnimationUtil.getShowAnimation(mView,AnimationUtil.ANIMATION_HIDE,viewHeight);
             animatorSet.addListener(new Animator.AnimatorListener() {
                 @Override
@@ -1189,7 +1189,7 @@ public final class OneSnackBar {
         }
     }
 
-    public int getAppearDirection(){
-        return appearDirection;
+    public boolean isFromTopToBottomObjectAnimator(){
+        return Build.VERSION.SDK_INT >= 12 && appearDirection == APPEAR_FROM_TOP_TO_DOWN ;
     }
 }
