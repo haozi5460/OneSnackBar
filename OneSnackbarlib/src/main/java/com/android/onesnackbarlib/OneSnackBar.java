@@ -969,7 +969,8 @@ public final class OneSnackBar {
      * Returns true if we should animate the Snackbar view in/out.
      */
     private boolean shouldAnimate() {
-        return !mAccessibilityManager.isEnabled();
+        return true;
+//        return !mAccessibilityManager.isEnabled();
     }
 
     /**
