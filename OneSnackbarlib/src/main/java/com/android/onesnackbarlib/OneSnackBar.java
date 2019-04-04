@@ -960,10 +960,10 @@ public final class OneSnackBar {
             mCallback.onDismissed(this, event);
         }
         // Lastly, remove the view from the parent (if attached)
-        final ViewParent parent = mView.getParent();
-        if (parent instanceof ViewGroup) {
-            ((ViewGroup) parent).removeView(mView);
-        }
+//        final ViewParent parent = mView.getParent();
+//        if (parent instanceof ViewGroup) {
+//            ((ViewGroup) parent).removeView(mView);
+//        }
     }
     /**
      * Returns true if we should animate the Snackbar view in/out.
