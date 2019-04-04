@@ -19,9 +19,9 @@ public class AnimationUtil {
                 AnimatorSet pullSet = new AnimatorSet();
                 pullSet.playTogether(
                         ObjectAnimator.ofFloat(mView, "translationY",
-                                -height-OTHER_HEIGHT, 0,-OTHER_HEIGHT)
-//                        ObjectAnimator.ofFloat(mView, "translationY",
-//                                -height, OTHER_HEIGHT,0)
+                                -height-OTHER_HEIGHT, 0,-OTHER_HEIGHT),
+                        ObjectAnimator.ofFloat(mView, "alpha",
+                                0,1)
                 );
                 pullSet.setDuration(800);
                 return pullSet;
