@@ -719,6 +719,7 @@ public final class OneSnackBar {
     };
 
     final void showView() {
+        mView.setVisibility(View.VISIBLE);
         if (mView.getParent() == null) {
             final ViewGroup.LayoutParams lp = mView.getLayoutParams();
             if (lp instanceof CoordinatorLayout.LayoutParams) {
@@ -954,6 +955,7 @@ public final class OneSnackBar {
 
     private void onViewHidden(int event) {
         // First tell the SnackbarManager that it has been dismissed
+        mView.setVisibility(View.INVISIBLE);
         SnackbarManager.getInstance().onDismissed(mManagerCallback);
         // Now call the dismiss listener (if available)
         if (mCallback != null) {
