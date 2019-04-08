@@ -1190,6 +1190,6 @@ public final class OneSnackBar {
     }
 
     public boolean isFromTopToBottomObjectAnimator(){
-        return Build.VERSION.SDK_INT >= 12 && appearDirection == APPEAR_FROM_TOP_TO_DOWN ;
+        return Build.VERSION.SDK_INT > 21 && appearDirection == APPEAR_FROM_TOP_TO_DOWN ;
     }
 }
