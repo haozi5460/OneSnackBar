@@ -3,12 +3,12 @@ package com.android.onesnackbarlib;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.view.View;
 import android.view.animation.Interpolator;
+import android.view.animation.LinearInterpolator;
 
 public class AnimationUtil {
-    static final Interpolator FAST_OUT_SLOW_IN_INTERPOLATOR = new FastOutSlowInInterpolator();
+    static final Interpolator FAST_OUT_SLOW_IN_INTERPOLATOR = new LinearInterpolator();
 
     public static final int ANIMATION_PULL = 0X003;
     public static final int ANIMATION_HIDE = 0X004;
